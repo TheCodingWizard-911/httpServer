@@ -70,10 +70,6 @@ class Server:
             connectionSocket.close()
 
 
-class Client:
-    pass
-
-
 class Request:
     requestLine = None
     requestHeaders = None
@@ -154,7 +150,7 @@ class Methods:
 
             return self.response
         except:
-            return "Unable to open file."
+            return self.notFound(self)
 
     def headMethod(self, uri, version):
 
@@ -179,9 +175,31 @@ class Methods:
 
             return self.response
         except:
-            return "Unable to open file."
+            return self.notFound(self)
 
     def badRequest(self):
+
+        fileName = serverRoot + "badRequest.html"
+        self.contentType = mimetypes.guess_type(fileName)[0]
+        file = open(fileName, "r")
+        self.responseBody = file.read()
+        self.currentStatus = 400
+        self.contentLength = len(self.responseBody)
+        self.responseHeaders = self.createResponseHeaders(self)
+        self.response = self.responseHeaders + self.responseBody
+
+        return self.response
+
+    def notFound(self):
+
+        fileName = serverRoot + "notFound.html"
+        self.contentType = mimetypes.guess_type(fileName)[0]
+        file = open(fileName, "r")
+        self.responseBody = file.read()
+        self.currentStatus = 404
+        self.contentLength = len(self.responseBody)
+        self.responseHeaders = self.createResponseHeaders(self)
+        self.response = self.responseHeaders + self.responseBody
 
         return self.response
 
