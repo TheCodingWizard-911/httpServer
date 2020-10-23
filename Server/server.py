@@ -9,7 +9,7 @@ import threading
 import time
 
 serverName = "CN HTTP Server"
-serverRoot = "../Website/"
+websiteRoot = "../Website/"
 
 
 class Server:
@@ -42,7 +42,7 @@ class Server:
             data = ""
 
             while True:
-                recieved = connectionSocket.recv(16384).decode()
+                recieved = connectionSocket.recv(1024).decode()
                 data += recieved
 
                 if not recieved.split("\r\n")[-2]:
@@ -60,6 +60,23 @@ class Server:
 
                 self.response = Methods.headMethod(
                     Methods, Request.requestURI, Request.requestVersion
+                )
+
+            elif method == "PUT":
+
+                self.response = Methods.putMethod(
+                    Methods,
+                    Request.requestURI,
+                    Request.requestVersion,
+                    connectionSocket,
+                )
+
+            elif method == "DELETE":
+
+                self.response = Methods.deleteMethod(
+                    Methods,
+                    Request.requestURI,
+                    Request.requestVersion,
                 )
 
             else:
@@ -101,6 +118,7 @@ class Methods:
 
     statusCodes = {
         200: "OK",
+        201: "Created",
         400: "Bad Request",
         404: "Not Found",
     }
@@ -136,7 +154,7 @@ class Methods:
         if not fileName:
             fileName = "index.html"
 
-        fileName = serverRoot + fileName
+        fileName = os.path.join(websiteRoot, fileName)
         self.contentType = mimetypes.guess_type(fileName)[0]
 
         try:
@@ -161,7 +179,7 @@ class Methods:
         if not fileName:
             fileName = "index.html"
 
-        fileName = serverRoot + fileName
+        fileName = os.path.join(websiteRoot, fileName)
         self.contentType = mimetypes.guess_type(fileName)[0]
 
         try:
@@ -177,9 +195,72 @@ class Methods:
         except:
             return self.notFound(self)
 
+    def putMethod(self, uri, version, connectionSocket):
+        self.version = version
+
+        fileName = uri.strip("/")
+
+        if not fileName:
+            fileName = "putData.text"
+
+        fileName = os.path.join(websiteRoot, fileName)
+
+        data = ""
+
+        file = open(fileName, "w")
+
+        while True:
+
+            line = connectionSocket.recv(1024).decode()
+            if not line.split("\r\n")[-2]:
+                break
+            data += line
+
+        try:
+
+            file.write(data)
+            self.contentType = mimetypes.guess_type(fileName)[0]
+            self.contentLength = len(data)
+            self.contentStatus = 201
+            self.responseHeaders = self.createResponseHeaders(self)
+
+            self.response = self.responseHeaders
+
+            return self.response
+
+        except:
+            pass
+
+    def deleteMethod(self, uri, version):
+        self.version = version
+
+        fileName = uri.strip("/")
+
+        if not fileName:
+            fileName = "temp.txt"
+
+        fileName = os.path.join(websiteRoot, fileName)
+
+        data = ""
+
+        try:
+            os.remove(fileName)
+            fileName = os.path.join(websiteRoot, "delete.html")
+            self.contentType = mimetypes.guess_type(fileName)[0]
+            file = open(fileName, "r")
+            self.responseBody = file.read()
+            self.currentStatus = 200
+            self.contentLength = len(self.responseBody)
+            self.responseHeaders = self.createResponseHeaders(self)
+            self.response = self.responseHeaders + self.responseBody
+
+            return self.response
+        except:
+            pass
+
     def badRequest(self):
 
-        fileName = serverRoot + "badRequest.html"
+        fileName = os.path.join(websiteRoot, "badRequest.html")
         self.contentType = mimetypes.guess_type(fileName)[0]
         file = open(fileName, "r")
         self.responseBody = file.read()
@@ -192,7 +273,7 @@ class Methods:
 
     def notFound(self):
 
-        fileName = serverRoot + "notFound.html"
+        fileName = os.path.join(websiteRoot, "notFound.html")
         self.contentType = mimetypes.guess_type(fileName)[0]
         file = open(fileName, "r")
         self.responseBody = file.read()
