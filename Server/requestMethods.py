@@ -1,6 +1,7 @@
 import datetime
 import mimetypes
 import os
+import random
 
 serverName = "CN HTTP Server"
 websiteRoot = "../Website/"
@@ -11,6 +12,7 @@ class Methods:
     responseHeaders = None
     responseBody = None
     response = None
+    cookieValue = random.randint(1000, 10000)
 
     statusCodes = {
         200: "OK",
@@ -36,6 +38,7 @@ class Methods:
         self.responseHeaders += f"Date: {self.currentDateTime} GMT\r\n"
         self.responseHeaders += f"Content-Type: {self.contentType}\r\n"
         self.responseHeaders += f"Server: {serverName}\r\n"
+        self.responseHeaders += f"Set-Cookie: cookie={self.cookieValue}\r\n"
         self.responseHeaders += f"Content-Length: {self.contentLength}\r\n"
         self.responseHeaders += "\r\n"
 
@@ -99,15 +102,14 @@ class Methods:
 
         data = ""
 
-        if not fileName == "post.html":
-            while True:
+        while True:
 
-                line = connectionSocket.recv(1024).decode()
-                if not line.split("\r\n")[-2]:
-                    break
-                data += line
+            line = connectionSocket.recv(1024).decode()
+            if not line.split("\r\n")[-2]:
+                break
+            data += line
 
-            fileName = "post.html"
+        fileName = "post.html"
 
         fileName = os.path.join(websiteRoot, fileName)
 
@@ -132,7 +134,7 @@ class Methods:
         fileName = uri.strip("/")
 
         if not fileName:
-            fileName = "putData.text"
+            fileName = "putData.txt"
 
         fileName = os.path.join(websiteRoot, fileName)
 

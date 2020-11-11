@@ -99,4 +99,8 @@ class Server:
 
 if __name__ == "__main__":
     httpServer = Server()
-    httpServer.createClientConnection()
+    try:
+        httpServer.createClientConnection()
+    except KeyboardInterrupt:
+        print("\nExiting Server...")
+        sys.exit()
