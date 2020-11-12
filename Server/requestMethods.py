@@ -2,6 +2,7 @@ import datetime
 import mimetypes
 import os
 import random
+import shutil
 
 serverName = "CN HTTP Server"
 websiteRoot = "../Website/"
@@ -30,6 +31,10 @@ class Methods:
 
     contentType = "text/html"
     contentLength = 0
+
+    def log(self, message):
+        file = open("server.log", "a")
+        file.write(message)
 
     def createResponseHeaders(self):
 
@@ -67,6 +72,7 @@ class Methods:
 
             return self.response
         except:
+            self.log("ERROR!!! The File Could Not Be Found\n")
             return self.notFound(self)
 
     def headMethod(self, uri, version):
@@ -92,6 +98,7 @@ class Methods:
 
             return self.response
         except:
+            self.log("ERROR!!! The File Could Not Be Found\n")
             return self.notFound(self)
 
     def postMethod(self, uri, version, connectionSocket):
@@ -126,7 +133,9 @@ class Methods:
             return self.response
 
         except:
-            pass
+            message = "ERROR!!! post method could not be processed\n"
+            self.log(self, message)
+            return message
 
     def putMethod(self, uri, version, connectionSocket):
         self.version = version
@@ -136,11 +145,11 @@ class Methods:
         if not fileName:
             fileName = "putData.txt"
 
-        fileName = os.path.join(websiteRoot, fileName)
+        fileName = os.path.join(websiteRoot + "/created", fileName)
 
         data = ""
 
-        file = open(fileName, "w")
+        file = open(fileName, "a")
 
         while True:
 
@@ -162,7 +171,9 @@ class Methods:
             return self.response
 
         except:
-            pass
+            message = "ERROR!!! put method could not be processed\n"
+            self.log(self, message)
+            return message
 
     def deleteMethod(self, uri, version):
         self.version = version
@@ -174,10 +185,10 @@ class Methods:
 
         fileName = os.path.join(websiteRoot, fileName)
 
-        data = ""
+        if os.access(fileName, os.R_OK) and os.access(fileName, os.W_OK):
+            os.system(f"mv {fileName} {websiteRoot}/deleted/")
 
         try:
-            os.remove(fileName)
             fileName = os.path.join(websiteRoot, "delete.html")
             self.contentType = mimetypes.guess_type(fileName)[0]
             file = open(fileName, "r")
@@ -189,7 +200,9 @@ class Methods:
 
             return self.response
         except:
-            pass
+            message = "ERROR!!! page could not be found\n"
+            self.log(self, message)
+            return message
 
     def badRequest(self):
 
@@ -201,6 +214,8 @@ class Methods:
         self.contentLength = len(self.responseBody)
         self.responseHeaders = self.createResponseHeaders(self)
         self.response = self.responseHeaders + self.responseBody
+
+        self.log("ERROR!!! Bad Request")
 
         return self.response
 
@@ -214,5 +229,7 @@ class Methods:
         self.contentLength = len(self.responseBody)
         self.responseHeaders = self.createResponseHeaders(self)
         self.response = self.responseHeaders + self.responseBody
+
+        self.log("ERROR!!! The File Could Not Be Found\n")
 
         return self.response

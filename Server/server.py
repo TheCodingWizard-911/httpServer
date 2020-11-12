@@ -3,7 +3,7 @@
 import socket
 import sys
 import threading
-import time
+import datetime
 
 from requestHandler import Request
 from requestMethods import Methods
@@ -22,6 +22,10 @@ class Server:
     clients = set()
     response = None
 
+    def log(self, message):
+        file = open("server.log", "a")
+        file.write(message)
+
     def startServer(self):
         thread = threading.Thread(
             target=self.createClientConnection,
@@ -33,7 +37,9 @@ class Server:
         while True:
 
             connectionSocket, address = self.serverSocket.accept()
-            print("Connected To Client at :", address)
+            self.log(f"Connected To Client with address : {address}\n")
+            self.log(f"The Connection Socket is : {connectionSocket}\t")
+            self.log(f"At time : {str(datetime.datetime.now()).split()[-1]}\n")
             self.clients.add(connectionSocket)
 
             data = ""
@@ -46,6 +52,9 @@ class Server:
                     break
 
             method = Request.parseRequest(Request, data)
+
+            self.log(f"Received request : {Request.requestLine}\t")
+            self.log(f"At time : {str(datetime.datetime.now()).split()[-1]}\n")
 
             if method == "GET":
 
@@ -94,6 +103,8 @@ class Server:
                 self.response = Methods.badRequest(Methods)
 
             connectionSocket.send(self.response.encode("latin1"))
+            self.log(f"Request {Request.requestLine} successfully completed\t")
+            self.log(f"At time : {str(datetime.datetime.now()).split()[-1]}\n")
             connectionSocket.close()
 
 

@@ -1,0 +1,89 @@
+Connected To Client with address : ('127.0.0.1', 33146)
+The Connection Socket is : <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 12345), raddr=('127.0.0.1', 33146)>	At time : 20:07:52.157416
+Received request : ['GET', '/', 'HTTP/1.1']	At time : 20:07:52.157855
+Request ['GET', '/', 'HTTP/1.1'] successfully completed	At time : 20:07:52.158518
+Connected To Client with address : ('127.0.0.1', 33148)
+The Connection Socket is : <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 12345), raddr=('127.0.0.1', 33148)>	At time : 20:07:52.277315
+Received request : ['GET', '/httpImg.png', 'HTTP/1.1']	At time : 20:07:52.278019
+Request ['GET', '/httpImg.png', 'HTTP/1.1'] successfully completed	At time : 20:07:52.279227
+Connected To Client with address : ('127.0.0.1', 33152)
+The Connection Socket is : <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 12345), raddr=('127.0.0.1', 33152)>	At time : 20:08:37.860535
+Received request : ['GET', '/', 'HTTP/1.1']	At time : 20:08:37.861044
+Request ['GET', '/', 'HTTP/1.1'] successfully completed	At time : 20:08:37.861719
+Connected To Client with address : ('127.0.0.1', 33154)
+The Connection Socket is : <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 12345), raddr=('127.0.0.1', 33154)>	At time : 20:08:37.987484
+Received request : ['GET', '/httpImg.png', 'HTTP/1.1']	At time : 20:08:37.992597
+Request ['GET', '/httpImg.png', 'HTTP/1.1'] successfully completed	At time : 20:08:37.994091
+Connected To Client with address : ('127.0.0.1', 33282)
+The Connection Socket is : <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 12345), raddr=('127.0.0.1', 33282)>	At time : 20:17:10.301793
+Received request : ['GET', '/', 'HTTP/1.1']	At time : 20:17:10.302130
+Request ['GET', '/', 'HTTP/1.1'] successfully completed	At time : 20:17:10.328499
+Connected To Client with address : ('127.0.0.1', 33284)
+The Connection Socket is : <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 12345), raddr=('127.0.0.1', 33284)>	At time : 20:17:10.580467
+Received request : ['GET', '/httpImg.png', 'HTTP/1.1']	At time : 20:17:10.581019
+Request ['GET', '/httpImg.png', 'HTTP/1.1'] successfully completed	At time : 20:17:10.581932
+Connected To Client with address : ('127.0.0.1', 33390)
+The Connection Socket is : <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 12345), raddr=('127.0.0.1', 33390)>	At time : 20:34:14.770618
+Received request : ['GET', '/', 'HTTP/1.1']	At time : 20:34:14.770971
+Request ['GET', '/', 'HTTP/1.1'] successfully completed	At time : 20:34:14.796911
+Connected To Client with address : ('127.0.0.1', 33392)
+The Connection Socket is : <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 12345), raddr=('127.0.0.1', 33392)>	At time : 20:34:14.918833
+Received request : ['GET', '/httpImg.png', 'HTTP/1.1']	At time : 20:34:14.919198
+Request ['GET', '/httpImg.png', 'HTTP/1.1'] successfully completed	At time : 20:34:14.920011
+Connected To Client with address : ('127.0.0.1', 33500)
+The Connection Socket is : <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 12345), raddr=('127.0.0.1', 33500)>	At time : 20:41:49.423627
+Received request : ['DELETE', '/temp.txt', 'HTTP/1.1']	At time : 20:42:05.194056
+Connected To Client with address : ('127.0.0.1', 40188)
+The Connection Socket is : <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1234), raddr=('127.0.0.1', 40188)>	At time : 20:42:55.813890
+Received request : ['DELETE', '/temp.txt', 'HTTP/1.1']	At time : 20:43:15.421503
+Connected To Client with address : ('127.0.0.1', 33526)
+The Connection Socket is : <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 12345), raddr=('127.0.0.1', 33526)>	At time : 20:44:13.785269
+Received request : ['DELETE', '/temp.txt', 'HTTP/1.1']	At time : 20:44:27.509625
+Connected To Client with address : ('127.0.0.1', 33544)
+The Connection Socket is : <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 12345), raddr=('127.0.0.1', 33544)>	At time : 20:45:39.747998
+Received request : ['DELETE', '/', 'HTTP/1.1']	At time : 20:45:52.761242
+Connected To Client with address : ('127.0.0.1', 40240)
+The Connection Socket is : <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1234), raddr=('127.0.0.1', 40240)>	At time : 20:47:14.465038
+Received request : ['DELETE', '/', 'HTTP/1.1']	At time : 20:47:22.354282
+Request ['DELETE', '/', 'HTTP/1.1'] successfully completed	At time : 20:47:22.500199
+Connected To Client with address : ('127.0.0.1', 33576)
+The Connection Socket is : <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 12345), raddr=('127.0.0.1', 33576)>	At time : 20:48:07.879604
+Received request : ['DELETE', '/', 'HTTP/1.1']	At time : 20:48:33.533314
+Connected To Client with address : ('127.0.0.1', 33618)
+The Connection Socket is : <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 12345), raddr=('127.0.0.1', 33618)>	At time : 20:50:08.687799
+Received request : ['DELETE', '/', 'HTTP/1.1']	At time : 20:50:28.508885
+Connected To Client with address : ('127.0.0.1', 33632)
+The Connection Socket is : <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 12345), raddr=('127.0.0.1', 33632)>	At time : 20:51:32.565177
+Received request : ['DELETE', '/', 'HTTP/1.1']	At time : 20:51:39.089067
+Connected To Client with address : ('127.0.0.1', 40316)
+The Connection Socket is : <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1234), raddr=('127.0.0.1', 40316)>	At time : 20:52:02.203684
+Received request : ['DELETE', '/', 'HTTP/1.1']	At time : 20:52:42.917939
+Connected To Client with address : ('127.0.0.1', 33662)
+The Connection Socket is : <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 12345), raddr=('127.0.0.1', 33662)>	At time : 20:53:32.586531
+Received request : ['DELETE', '/', 'HTTP/1.1']	At time : 20:53:39.731976
+Connected To Client with address : ('127.0.0.1', 40348)
+The Connection Socket is : <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1234), raddr=('127.0.0.1', 40348)>	At time : 20:54:02.184478
+Received request : ['DELETE', '/', 'HTTP/1.1']	At time : 20:54:08.883774
+Connected To Client with address : ('127.0.0.1', 40390)
+The Connection Socket is : <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1234), raddr=('127.0.0.1', 40390)>	At time : 20:56:05.322262
+Received request : ['DELETE', '/', 'HTTP/1.1']	At time : 20:56:12.828408
+Connected To Client with address : ('127.0.0.1', 33824)
+The Connection Socket is : <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 12345), raddr=('127.0.0.1', 33824)>	At time : 20:57:48.019812
+Received request : ['DELETE', '/', 'HTTP/1.1']	At time : 20:57:56.999679
+Connected To Client with address : ('127.0.0.1', 33838)
+The Connection Socket is : <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 12345), raddr=('127.0.0.1', 33838)>	At time : 20:59:02.928516
+Received request : ['DELETE', '/', 'HTTP/1.1']	At time : 20:59:16.152583
+ERROR!!! page could not be found
+Connected To Client with address : ('127.0.0.1', 33868)
+The Connection Socket is : <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 12345), raddr=('127.0.0.1', 33868)>	At time : 21:01:00.549055
+Received request : ['DELETE', '/', 'HTTP/1.1']	At time : 21:01:06.533732
+ERROR!!! page could not be found
+Request ['DELETE', '/', 'HTTP/1.1'] successfully completed	At time : 21:01:06.548194
+Connected To Client with address : ('127.0.0.1', 33884)
+The Connection Socket is : <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 12345), raddr=('127.0.0.1', 33884)>	At time : 21:02:10.708158
+Received request : ['DELETE', '/', 'HTTP/1.1']	At time : 21:02:18.851688
+Request ['DELETE', '/', 'HTTP/1.1'] successfully completed	At time : 21:02:18.894474
+Connected To Client with address : ('127.0.0.1', 33934)
+The Connection Socket is : <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 12345), raddr=('127.0.0.1', 33934)>	At time : 21:10:52.418700
+Received request : ['PUT', '/new.txt', 'HTTP/1.1']	At time : 21:11:15.348374
+Request ['PUT', '/new.txt', 'HTTP/1.1'] successfully completed	At time : 21:11:22.385992
