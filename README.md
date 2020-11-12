@@ -1,5 +1,6 @@
 # HTTP Server Using Python
 
+
 ### Pseudocode used for creating http server
 
 ```python
@@ -41,7 +42,7 @@ webserver {
 	}
 ```
 
-###How to use the server
+### How to use the server
 
 Open the project in pycharm IDE
 
