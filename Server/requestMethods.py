@@ -2,10 +2,11 @@ import datetime
 import mimetypes
 import os
 import random
-import shutil
 
-serverName = "CN HTTP Server"
-websiteRoot = "../Website/"
+import Server.config as config
+
+serverName = config.serverName
+websiteRoot = config.websiteRoot
 
 
 class Methods:

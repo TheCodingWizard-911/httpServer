@@ -4,14 +4,15 @@ import socket
 import sys
 import threading
 import datetime
+import Server.config as config
 
-from requestHandler import Request
-from requestMethods import Methods
+from Server.requestHandler import Request
+from Server.requestMethods import Methods
 
 
 class Server:
 
-    serverPort = int(sys.argv[1])
+    serverPort = config.serverPort
     serverHost = "127.0.0.1"
     serverSocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
     serverSocket.bind((serverHost, serverPort))
@@ -105,7 +106,13 @@ class Server:
             connectionSocket.send(self.response.encode("latin1"))
             self.log(f"Request {Request.requestLine} successfully completed\t")
             self.log(f"At time : {str(datetime.datetime.now()).split()[-1]}\n")
-            connectionSocket.close()
+            if not config.persistantConnection:
+                connectionSocket.close()
+            else:
+                try:
+                    continue
+                except KeyboardInterrupt:
+                    break
 
 
 if __name__ == "__main__":
