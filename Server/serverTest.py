@@ -1,5 +1,5 @@
 import sys
-import Server.server as server
+import server
 
 if __name__ == "__main__":
     httpServer = server.Server()

@@ -127,3 +127,49 @@ Connected To Client with address : ('127.0.0.1', 34354)
 The Connection Socket is : <socket.socket fd=4, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 12345), raddr=('127.0.0.1', 34354)>	At time : 22:00:25.244260
 Received request : ['GET', '/httpImg.png', 'HTTP/1.1']	At time : 22:00:25.244809
 Request ['GET', '/httpImg.png', 'HTTP/1.1'] successfully completed	At time : 22:00:25.246439
+Connected To Client with address : ('127.0.0.1', 34688)
+The Connection Socket is : <socket.socket fd=4, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 12345), raddr=('127.0.0.1', 34688)>	At time : 22:18:57.953485
+Received request : ['GET', '/', 'HTTP/1.1']	At time : 22:18:57.953970
+Request ['GET', '/', 'HTTP/1.1'] successfully completed	At time : 22:18:57.983742
+Connected To Client with address : ('127.0.0.1', 34690)
+The Connection Socket is : <socket.socket fd=4, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 12345), raddr=('127.0.0.1', 34690)>	At time : 22:18:58.102648
+Received request : ['GET', '/httpImg.png', 'HTTP/1.1']	At time : 22:18:58.102953
+Request ['GET', '/httpImg.png', 'HTTP/1.1'] successfully completed	At time : 22:18:58.103551
+Connected To Client with address : ('127.0.0.1', 41428)
+The Connection Socket is : <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1234), raddr=('127.0.0.1', 41428)>	At time : 22:24:02.734579
+Received request : ['GET', '/', 'HTTP/1.1']	At time : 22:24:02.734944
+Request ['GET', '/', 'HTTP/1.1'] successfully completed	At time : 22:24:02.761400
+Connected To Client with address : ('127.0.0.1', 41430)
+The Connection Socket is : <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1234), raddr=('127.0.0.1', 41430)>	At time : 22:24:02.865064
+Received request : ['GET', '/httpImg.png', 'HTTP/1.1']	At time : 22:24:02.865315
+Request ['GET', '/httpImg.png', 'HTTP/1.1'] successfully completed	At time : 22:24:02.865793
+Connected To Client with address : ('127.0.0.1', 41432)
+The Connection Socket is : <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1234), raddr=('127.0.0.1', 41432)>	At time : 22:24:02.916514
+Received request : ['GET', '/favicon.ico', 'HTTP/1.1']	At time : 22:24:02.916744
+Connected To Client with address : ('127.0.0.1', 41450)
+The Connection Socket is : <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1234), raddr=('127.0.0.1', 41450)>	At time : 22:25:16.271391
+Received request : ['GET', '/', 'HTTP/1.1']	At time : 22:25:16.272046
+Request ['GET', '/', 'HTTP/1.1'] successfully completed	At time : 22:25:16.298192
+Connected To Client with address : ('127.0.0.1', 41452)
+The Connection Socket is : <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1234), raddr=('127.0.0.1', 41452)>	At time : 22:25:16.413010
+Received request : ['GET', '/httpImg.png', 'HTTP/1.1']	At time : 22:25:16.413647
+Request ['GET', '/httpImg.png', 'HTTP/1.1'] successfully completed	At time : 22:25:16.414804
+Connected To Client with address : ('127.0.0.1', 41454)
+The Connection Socket is : <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 1234), raddr=('127.0.0.1', 41454)>	At time : 22:25:16.487883
+Received request : ['GET', '/favicon.ico', 'HTTP/1.1']	At time : 22:25:16.488621
+Connected To Client with address : ('127.0.0.1', 34800)
+The Connection Socket is : <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 12345), raddr=('127.0.0.1', 34800)>	At time : 22:26:21.827743
+Received request : ['GET', '/', 'HTTP/1.1']	At time : 22:26:21.828188
+Request ['GET', '/', 'HTTP/1.1'] successfully completed	At time : 22:26:21.853097
+Connected To Client with address : ('127.0.0.1', 34806)
+The Connection Socket is : <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 12345), raddr=('127.0.0.1', 34806)>	At time : 22:26:21.981155
+Received request : ['GET', '/httpImg.png', 'HTTP/1.1']	At time : 22:26:21.981767
+Request ['GET', '/httpImg.png', 'HTTP/1.1'] successfully completed	At time : 22:26:21.982672
+Connected To Client with address : ('127.0.0.1', 34808)
+The Connection Socket is : <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 12345), raddr=('127.0.0.1', 34808)>	At time : 22:26:27.868725
+Received request : ['GET', '/', 'HTTP/1.1']	At time : 22:26:27.869324
+Request ['GET', '/', 'HTTP/1.1'] successfully completed	At time : 22:26:27.870322
+Connected To Client with address : ('127.0.0.1', 34810)
+The Connection Socket is : <socket.socket fd=7, family=AddressFamily.AF_INET, type=SocketKind.SOCK_STREAM, proto=0, laddr=('127.0.0.1', 12345), raddr=('127.0.0.1', 34810)>	At time : 22:26:27.994127
+Received request : ['GET', '/httpImg.png', 'HTTP/1.1']	At time : 22:26:27.994822
+Request ['GET', '/httpImg.png', 'HTTP/1.1'] successfully completed	At time : 22:26:27.996087
