@@ -4,10 +4,10 @@ import socket
 import sys
 import threading
 import datetime
-import Server.config as config
+import config
 
-from Server.requestHandler import Request
-from Server.requestMethods import Methods
+from requestHandler import Request
+from requestMethods import Methods
 
 
 class Server:

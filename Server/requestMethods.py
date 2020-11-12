@@ -3,7 +3,7 @@ import mimetypes
 import os
 import random
 
-import Server.config as config
+import config
 
 serverName = config.serverName
 websiteRoot = config.websiteRoot
@@ -73,7 +73,7 @@ class Methods:
 
             return self.response
         except:
-            self.log("ERROR!!! The File Could Not Be Found\n")
+            self.log(self,"ERROR!!! The File Could Not Be Found\n")
             return self.notFound(self)
 
     def headMethod(self, uri, version):
@@ -99,7 +99,7 @@ class Methods:
 
             return self.response
         except:
-            self.log("ERROR!!! The File Could Not Be Found\n")
+            self.log(self, "ERROR!!! The File Could Not Be Found\n")
             return self.notFound(self)
 
     def postMethod(self, uri, version, connectionSocket):
