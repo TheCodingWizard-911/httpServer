@@ -40,3 +40,13 @@ webserver {
 		}	
 	}
 ```
+
+###How to use the server
+
+Open the project in pycharm IDE
+
+Open The Folder "Server" click on server.py click on run
+
+To test the server
+
+Open the folder "Server" click on serverTest.py click on run
